@@ -1,5 +1,12 @@
 # Cliente em .NET para a [API REST do Cobre Grátis](https://github.com/BielSystems/cobregratis-api)
 
+## Instalação
+
+Baixe o código ou utilize [o pacote nuget](https://nuget.org/packages/CobreGratisDotNet) da seguinte forma:
+```
+PM> Install-Package CobreGratisDotNet
+```
+
 ## Uso
 
 Simples assim:
