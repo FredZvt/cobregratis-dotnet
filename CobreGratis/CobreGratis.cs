@@ -215,7 +215,6 @@ namespace BielSystems
         }
 
         public BankBillet CreateBankBillet(
-            int accountId,
             decimal amount,
             DateTime expireAt,
             string name,
@@ -237,7 +236,7 @@ namespace BielSystems
         {
             var requestContent =
                 XmlSerializer.SerializeForCreateOrUpdateBankBillet(
-                    accountId, amount, expireAt, name, description, instructions, cnpjCpf, address, 
+                    amount, expireAt, name, description, instructions, cnpjCpf, address, 
                     zipcode, neighborhood, city, state, documentNumber, documentAmount, 
                     discountAmount, percentFines, percentInterestDay, comments
                 );
@@ -251,7 +250,6 @@ namespace BielSystems
 
         public void UpdateBankBillet(
             int billetId,
-            int? accountId = null,
             decimal? amount = null,
             DateTime? expireAt = null,
             string name = null,
@@ -273,7 +271,7 @@ namespace BielSystems
         {
             var requestContent =
                 XmlSerializer.SerializeForCreateOrUpdateBankBillet(
-                    accountId, amount, expireAt, name, description, instructions, cnpjCpf, address,
+                    amount, expireAt, name, description, instructions, cnpjCpf, address,
                     zipcode, neighborhood, city, state, documentNumber, documentAmount,
                     discountAmount, percentFines, percentInterestDay, comments
                 );

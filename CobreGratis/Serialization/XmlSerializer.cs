@@ -70,7 +70,6 @@ namespace BielSystems.Serialization
         }
 
         public string SerializeForCreateOrUpdateBankBillet(
-            int? accountId = null,
             decimal? amount = null,
             DateTime? expireAt = null,
             string name = null,
@@ -97,7 +96,6 @@ namespace BielSystems.Serialization
             requestContent.Append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             requestContent.Append("<bank-billet>");
 
-            if (accountId != null) requestContent.AppendFormat("<bank-billet-account-id>{0}</bank-billet-account-id>", accountId);
             if (amount != null) requestContent.AppendFormat("<amount>{0}</amount>", amount.Value.ToString("0.00", ni));
             if (expireAt != null) requestContent.AppendFormat("<expire-at>{0}</expire-at>", expireAt.Value.ToString("yyyy-MM-dd"));
             if (name != null) requestContent.AppendFormat("<name>{0}</name>", name);

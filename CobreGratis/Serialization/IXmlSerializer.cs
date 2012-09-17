@@ -8,7 +8,6 @@ namespace BielSystems.Serialization
         T DeserializeXmlNodeToObject<T>(XmlNode xml);
 
         string SerializeForCreateOrUpdateBankBillet(
-            int? accountId = null,
             decimal? amount = null,
             DateTime? expireAt = null,
             string name = null,

@@ -17,7 +17,7 @@ namespace BielSystems
         void DeleteBillet(int billetId);
 
         BankBillet CreateBankBillet(
-            int accountId, decimal amount, DateTime expireAt, string name, string description = null,
+            decimal amount, DateTime expireAt, string name, string description = null,
             string instructions = null, string cnpjCpf = null, string address = null, string zipcode = null,
             string neighborhood = null, string city = null, string state = null,
             string documentNumber = null, decimal? documentAmount = null, decimal? discountAmount = null,
@@ -25,8 +25,7 @@ namespace BielSystems
         );
 
         void UpdateBankBillet(
-            int billetId, 
-            int? accountId = null, decimal? amount = null, DateTime? expireAt = null, string name = null, string description = null, 
+            int billetId, decimal? amount = null, DateTime? expireAt = null, string name = null, string description = null, 
             string instructions = null, string cnpjCpf = null, string address = null, string zipcode = null, 
             string neighborhood = null, string city = null, string state = null, string documentNumber = null, 
             decimal? documentAmount = null, decimal? discountAmount = null, decimal? percentFines = null, 
