@@ -21,15 +21,17 @@ namespace BielSystems
             string instructions = null, string cnpjCpf = null, string address = null, string zipcode = null,
             string neighborhood = null, string city = null, string state = null,
             string documentNumber = null, decimal? documentAmount = null, decimal? discountAmount = null,
-            decimal? percentFines = null, decimal? percentInterestDay = null, string comments = null
+            decimal? percentFines = null, decimal? percentInterestDay = null, string comments = null,
+            int? bankBilletAccountId = null, int? serviceId = null
         );
 
         void UpdateBankBillet(
             int billetId, decimal? amount = null, DateTime? expireAt = null, string name = null, string description = null, 
             string instructions = null, string cnpjCpf = null, string address = null, string zipcode = null, 
             string neighborhood = null, string city = null, string state = null, string documentNumber = null, 
-            decimal? documentAmount = null, decimal? discountAmount = null, decimal? percentFines = null, 
-            decimal? percentInterestDay = null, string comments = null
+            decimal? documentAmount = null, decimal? discountAmount = null, decimal? percentFines = null,
+            decimal? percentInterestDay = null, string comments = null,
+            int? bankBilletAccountId = null, int? serviceId = null
         );
     }
 }

@@ -231,14 +231,17 @@ namespace BielSystems
             decimal? discountAmount = null,
             decimal? percentFines = null,
             decimal? percentInterestDay = null,
-            string comments = null
+            string comments = null,
+            int? bankBilletAccountId = null,
+            int? serviceId = null
             )
         {
             var requestContent =
                 XmlSerializer.SerializeForCreateOrUpdateBankBillet(
                     amount, expireAt, name, description, instructions, cnpjCpf, address, 
                     zipcode, neighborhood, city, state, documentNumber, documentAmount, 
-                    discountAmount, percentFines, percentInterestDay, comments
+                    discountAmount, percentFines, percentInterestDay, comments,
+                    bankBilletAccountId, serviceId
                 );
 
             var url = EndPoint + string.Format("bank_billets.xml");
@@ -266,14 +269,17 @@ namespace BielSystems
             decimal? discountAmount = null,
             decimal? percentFines = null,
             decimal? percentInterestDay = null,
-            string comments = null
+            string comments = null,
+            int? bankBilletAccountId = null,
+            int? serviceId = null
             )
         {
             var requestContent =
                 XmlSerializer.SerializeForCreateOrUpdateBankBillet(
                     amount, expireAt, name, description, instructions, cnpjCpf, address,
                     zipcode, neighborhood, city, state, documentNumber, documentAmount,
-                    discountAmount, percentFines, percentInterestDay, comments
+                    discountAmount, percentFines, percentInterestDay, comments,
+                    bankBilletAccountId, serviceId
                 );
 
             var url = EndPoint + string.Format("bank_billets/{0}.xml", billetId);

@@ -23,7 +23,7 @@ namespace ConsoleSandBox
             CobreGratis.CreateBankBillet(123.45M, DateTime.Now.AddDays(10), "Sacado da Silva");
             CobreGratis.CreateBankBillet(123.45M, DateTime.Now.AddDays(10), "Sacado da Silva", "description", "instructions", "cnpjCpf", "address", "zipcode", "neighborhood", "city", "state", "docNumber", 10.0M, 10.0M, 10.0M, 10.0M, "comments");
 
-            // Você pode atualizar boletos *!* EM RESCUNHO *!*:
+            // Você pode atualizar boletos *!* EM RASCUNHO *!*:
             CobreGratis.UpdateBankBillet(1, name: "Nome do Sacado", instructions: "Boleto de testes");
 
             // Você pode deletar boletos:

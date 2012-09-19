@@ -86,7 +86,9 @@ namespace BielSystems.Serialization
             decimal? discountAmount = null,
             decimal? percentFines = null,
             decimal? percentInterestDay = null,
-            string comments = null
+            string comments = null,
+            int? bankBilletAccountId = null,
+            int? serviceId = null
             )
         {
             var ni = new NumberFormatInfo();
@@ -96,6 +98,8 @@ namespace BielSystems.Serialization
             requestContent.Append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             requestContent.Append("<bank-billet>");
 
+            if (bankBilletAccountId != null) requestContent.AppendFormat("<bank-billet-account-id>{0}</bank-billet-account-id>", bankBilletAccountId.Value);
+            if (serviceId != null) requestContent.AppendFormat("<service-id>{0}</service-id>", serviceId.Value);
             if (amount != null) requestContent.AppendFormat("<amount>{0}</amount>", amount.Value.ToString("0.00", ni));
             if (expireAt != null) requestContent.AppendFormat("<expire-at>{0}</expire-at>", expireAt.Value.ToString("yyyy-MM-dd"));
             if (name != null) requestContent.AppendFormat("<name>{0}</name>", name);

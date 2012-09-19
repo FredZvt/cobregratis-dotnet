@@ -24,7 +24,9 @@ namespace BielSystems.Serialization
             decimal? discountAmount = null,
             decimal? percentFines = null,
             decimal? percentInterestDay = null,
-            string comments = null
+            string comments = null,
+            int? bankBilletAccountId = null,
+            int? serviceId = null
             );
     }
 }
