@@ -64,6 +64,36 @@ namespace ConsoleSandBox
 }
 ```
 
+## Log
+
+Se injetado via construtor da classe CobreGratis, o implementador da interface **BielSystems.Log.ILogger** receberá mensagens que poderão ajudar no debug das aplicações em runtime.
+
+```c#
+public interface ILogger
+{
+    void Log(string message);
+}
+```
+
+## Cache
+
+Quando o recurso de cache estiver habilitado (e estará, por padrão), a classe CobreGratis irá utilizar uma instância de **BielSystems.Cache.StaticCache** para persistir as informações de cache de forma estática.
+
+Para habilitar ou desabilitar o cache, utilize a propriedade **CobreGratis.EnableCache**.
+
+Caso deseje utilizar um sistema de persistência diferente do padrão ao utilizar a classe CobreGratis, basta injetar via contrutor a sua própria implementação da interface **BielSystems.Cache.ICache**:
+
+```c#
+public interface ICache
+{
+    void StoreData(string key, object data);
+    object LoadData(string key);
+    void ClearAll();
+    void ClearKey(string key);
+    bool ContainsKey(string key);
+}
+```
+
 ## Licença
 
 Esse código é livre para ser usado dentro dos termos da licença [MIT license](http://www.opensource.org/licenses/mit-license.php).
